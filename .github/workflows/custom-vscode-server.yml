@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Install VSCode server
-        run: sudo apt install vscode-server -y
+        run: curl -fsSL https://code-server.dev/install.sh | sh
 
       - name: Launch VSCode server
         run: vscode-server start
