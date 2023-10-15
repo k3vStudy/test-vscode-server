@@ -1,0 +1,21 @@
+name: custom-vscode-server
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@latest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install VSCode server
+        run: npm install vscode-server
+
+      - name: Launch VSCode server
+        run: vscode-server start
