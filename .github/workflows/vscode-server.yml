@@ -7,11 +7,10 @@ jobs:
     name: run-test-server
     runs-on: ubuntu-latest
     permissions:
-      actions: write
-      contents: write
+      actions: read
+      contents: read
     steps:
-    - name: 🐛 Debug Build
-      uses: stateful/vscode-server-action@v1
+    - uses: stateful/vscode-server-action@v1
       with:
         machineName: my-test-machine # optional, default: GitHub workflow run ID
         timeout: '300000'       # optional, default: 30000
