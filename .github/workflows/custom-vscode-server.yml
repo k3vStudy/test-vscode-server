@@ -15,4 +15,4 @@ jobs:
         run: curl -fsSL https://code-server.dev/install.sh | sh
 
       - name: Launch VSCode server
-        run: vscode-server start
+        run: code-server
